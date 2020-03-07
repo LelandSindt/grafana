@@ -1,0 +1,11 @@
+namespace: grafana
+
+images:
+- name: grafana/grafana
+  newTag: 6.6.2
+
+resources:
+- manifest.yaml
+
+generators:
+- secrets.yaml

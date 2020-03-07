@@ -95,12 +95,3 @@ spec:
   redirectScheme:
     scheme: https
     permanent: true
----
-apiVersion: v1
-kind: Secret
-metadata:
-  name: grafana
-type: Opaque
-data:
-  admin-user: "YWRtaW4="
-  admin-password: "ZVZWYndsbE84NTdxRzhmcEJ4RnBNTDZZWTUyUXc2YlNLS2l1N2huQQ=="
