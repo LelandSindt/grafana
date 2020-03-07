@@ -23,6 +23,11 @@ spec:
         - name: config
           mountPath: "/etc/grafana/provisioning/datasources/datasources.yaml"
           subPath: datasources.yaml
+        - name: dashboards
+          mountPath: "/var/lib/grafana/dashboards/default/"
+        - name: config
+          mountPath: "/etc/grafana/provisioning/dashboards/dashboardproviders.yaml"
+          subPath: dashboardproviders.yaml
         ports:
         - containerPort: 3000
         env:
@@ -51,6 +56,9 @@ spec:
       - name: config
         configMap:
           name: grafana
+      - name: dashboards
+        configMap:
+          name: dashboards
 ---
 apiVersion: v1
 kind: ConfigMap
@@ -65,6 +73,17 @@ data:
       name: Prometheus
       type: prometheus
       url: http://prometheus.prometheus.svc.cluster.local:9090
+  dashboardproviders.yaml: |
+    apiVersion: 1
+    providers:
+    - disableDeletion: false
+      editable: true
+      folder: ""
+      name: default
+      options:
+        path: /var/lib/grafana/dashboards/default
+      orgId: 1
+      type: file
 ---
 apiVersion: v1
 kind: Service

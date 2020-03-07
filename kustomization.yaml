@@ -9,3 +9,10 @@ resources:
 
 generators:
 - secrets.yaml
+
+configMapGenerator:
+- name: dashboards
+  files:
+  - dashboards/prometheus.json
+  - dashboards/traefik.json
+
