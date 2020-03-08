@@ -1362,7 +1362,7 @@
     ]
   },
   "timezone": "browser",
-  "title": "Prometheus 2.0 Stats",
-  "uid": "FruWxClWz",
+  "title": "Prometheus",
+  "uid": "prometheus",
   "version": 1
 }
