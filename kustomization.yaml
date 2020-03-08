@@ -8,15 +8,15 @@ resources:
 - manifest.yaml
 
 generators:
-- secrets.yaml
+- secrets/grafana/secrets.yaml
 
 configMapGenerator:
 - name: dashboards
   files:
-  - dashboards/prometheus.json
-  - dashboards/traefik.json
+  - configs/dashboards/prometheus.json
+  - configs/dashboards/traefik.json
 - name: grafana
   files:
-  - configs/dashboardproviders.yaml
-  - configs/datasources.yaml
-  - configs/plugins
+  - configs/grafana/dashboardproviders.yaml
+  - configs/grafana/datasources.yaml
+  - configs/grafana/plugins
