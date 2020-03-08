@@ -66,32 +66,6 @@ spec:
           name: dashboards
 ---
 apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: grafana
-data:
-  plugins: grafana-piechart-panel,digrich-bubblechart-panel,grafana-clock-panel
-  datasources.yaml: |
-    apiVersion: 1
-    datasources:
-    - access: proxy
-      isDefault: true
-      name: Prometheus
-      type: prometheus
-      url: http://prometheus.prometheus.svc.cluster.local:9090
-  dashboardproviders.yaml: |
-    apiVersion: 1
-    providers:
-    - disableDeletion: false
-      editable: true
-      folder: ""
-      name: default
-      options:
-        path: /var/lib/grafana/dashboards/default
-      orgId: 1
-      type: file
----
-apiVersion: v1
 kind: Service
 metadata:
   name: gafana

@@ -15,4 +15,8 @@ configMapGenerator:
   files:
   - dashboards/prometheus.json
   - dashboards/traefik.json
-
+- name: grafana
+  files:
+  - configs/dashboardproviders.yaml
+  - configs/datasources.yaml
+  - configs/plugins
