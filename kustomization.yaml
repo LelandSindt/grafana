@@ -15,6 +15,57 @@ configMapGenerator:
   files:
   - configs/dashboards/prometheus.json
   - configs/dashboards/traefik.json
+- name: dashboards-teslamate-charge-level
+  files:
+  - configs/dashboards/teslamate/charge-level.json
+- name: dashboards-teslamate-charges
+  files:
+  - configs/dashboards/teslamate/charges.json
+- name: dashboards-teslamate-charging-stats
+  files:
+  - configs/dashboards/teslamate/charging-stats.json
+- name: dashboards-teslamate-drives
+  files:
+  - configs/dashboards/teslamate/drives.json
+- name: dashboards-teslamate-drive-stats
+  files:
+  - configs/dashboards/teslamate/drive-stats.json
+- name: dashboards-teslamate-efficiency
+  files:
+  - configs/dashboards/teslamate/efficiency.json
+- name: dashboards-teslamate-locations
+  files:
+  - configs/dashboards/teslamate/locations.json
+- name: dashboards-teslamate-mileage
+  files:
+  - configs/dashboards/teslamate/mileage.json
+- name: dashboards-teslamate-overview
+  files:
+  - configs/dashboards/teslamate/overview.json
+- name: dashboards-teslamate-projected-range
+  files:
+  - configs/dashboards/teslamate/projected-range.json
+- name: dashboards-teslamate-states
+  files:
+  - configs/dashboards/teslamate/states.json
+- name: dashboards-teslamate-trip
+  files:
+  - configs/dashboards/teslamate/trip.json
+- name: dashboards-teslamate-updates
+  files:
+  - configs/dashboards/teslamate/updates.json
+- name: dashboards-teslamate-vampire-drain
+  files:
+  - configs/dashboards/teslamate/vampire-drain.json
+- name: dashboards-teslamate-visited
+  files:
+  - configs/dashboards/teslamate/visited.json
+- name: dashboards-teslamate-internal-charge-details
+  files:
+  - configs/dashboards/teslamate/internal/charge-details.json
+- name: dashboards-teslamate-internal-drive-details
+  files:
+  - configs/dashboards/teslamate/internal/drive-details.json
 - name: grafana
   files:
   - configs/grafana/dashboardproviders.yaml

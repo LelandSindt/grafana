@@ -25,6 +25,54 @@ spec:
           subPath: datasources.yaml
         - name: dashboards
           mountPath: "/var/lib/grafana/dashboards/default/"
+        - name: dashboards-teslamate-charges
+          mountPath: /var/lib/grafana/dashboards/teslamate/charges.json
+          subPath: charges.json
+        - name: dashboards-teslamate-charge-level
+          mountPath: /var/lib/grafana/dashboards/teslamate/charge-level.json
+          subPath: charge-level.json
+        - name: dashboards-teslamate-charging-stats
+          mountPath: /var/lib/grafana/dashboards/teslamate/charging-stats.json
+          subPath: chargng-stats.json
+        - name: dashboards-teslamate-drives
+          mountPath: /var/lib/grafana/dashboards/teslamate/drives.json
+          subPath: drives.json
+        - name: dashboards-teslamate-efficiency
+          mountPath: /var/lib/grafana/dashboards/teslamate/efficiency.json
+          subPath: efficiency.json
+        - name: dashboards-teslamate-locations
+          mountPath: /var/lib/grafana/dashboards/teslamate/locations.json
+          subPath: locations.json
+        - name: dashboards-teslamate-mileage
+          mountPath: /var/lib/grafana/dashboards/teslamate/mileage.json
+          subPath: mileage.json
+        - name: dashboards-teslamate-overview
+          mountPath: /var/lib/grafana/dashboards/teslamate/overview.json
+          subPath: overview.json
+        - name: dashboards-teslamate-projected-range
+          mountPath: /var/lib/grafana/dashboards/teslamate/projected-range.json
+          subPath: projected-range.json
+        - name: dashboards-teslamate-states
+          mountPath: /var/lib/grafana/dashboards/teslamate/states.json
+          subPath: states.json
+        - name: dashboards-teslamate-trip
+          mountPath: /var/lib/grafana/dashboards/teslamate/trip.json
+          subPath: trip.json
+        - name: dashboards-teslamate-updates
+          mountPath: /var/lib/grafana/dashboards/teslamate/updates.json
+          subPath: updates.json
+        - name: dashboards-teslamate-vampire-drain
+          mountPath: /var/lib/grafana/dashboards/teslamate/vampire-drain.json
+          subPath: vampire-drain.json
+        - name: dashboards-teslamate-visited
+          mountPath: /var/lib/grafana/dashboards/teslamate/visited.json
+          subPath: visited.json
+        - name: dashboards-teslamate-internal-charge-details
+          mountPath: /var/lib/grafana/dashboards/teslamate/internal/charge-details.json
+          subPath: charge-details.json
+        - name: dashboards-teslamate-internal-drive-details
+          mountPath: /var/lib/grafana/dashboards/teslamate/internal/drive-details.json
+          subPath: drive-details.json
         - name: config
           mountPath: "/etc/grafana/provisioning/dashboards/dashboardproviders.yaml"
           subPath: dashboardproviders.yaml
@@ -64,6 +112,60 @@ spec:
       - name: dashboards
         configMap:
           name: dashboards
+      - name: dashboards-teslamate-charges
+        configMap:
+          name: dashboards-teslamate-charges
+      - name: dashboards-teslamate-charge-level
+        configMap:
+          name: dashboards-teslamate-charge-level
+      - name: dashboards-teslamate-charging-stats
+        configMap:
+          name: dashboards-teslamate-charging-stats
+      - name: dashboards-teslamate-drives
+        configMap:
+          name: dashboards-teslamate-drives
+      - name: dashboards-teslamate-drive-state
+        configMap:
+          name: dashboards-teslamate-drive-state
+      - name: dashboards-teslamate-drive-stats
+        configMap:
+          name: dashboards-teslamate-drive-stats
+      - name: dashboards-teslamate-efficiency
+        configMap:
+          name: dashboards-teslamate-efficiency
+      - name: dashboards-teslamate-locations
+        configMap:
+          name: dashboards-teslamate-locations
+      - name: dashboards-teslamate-mileage
+        configMap:
+          name: dashboards-teslamate-mileage
+      - name: dashboards-teslamate-overview
+        configMap:
+          name: dashboards-teslamate-overview
+      - name: dashboards-teslamate-projected-range
+        configMap:
+          name: dashboards-teslamate-projected-range
+      - name: dashboards-teslamate-states
+        configMap:
+          name: dashboards-teslamate-states
+      - name: dashboards-teslamate-trip
+        configMap:
+          name: dashboards-teslamate-trip
+      - name: dashboards-teslamate-updates
+        configMap:
+          name: dashboards-teslamate-updates
+      - name: dashboards-teslamate-vampire-drain
+        configMap:
+          name: dashboards-teslamate-vampire-drain
+      - name: dashboards-teslamate-visited
+        configMap:
+          name: dashboards-teslamate-visited
+      - name: dashboards-teslamate-internal-charge-details
+        configMap:
+          name: dashboards-teslamate-internal-charge-details
+      - name: dashboards-teslamate-internal-drive-details
+        configMap:
+          name: dashboards-teslamate-internal-drive-details
 ---
 apiVersion: v1
 kind: Service
