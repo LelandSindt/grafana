@@ -33,7 +33,7 @@ spec:
           subPath: charge-level.json
         - name: dashboards-teslamate-charging-stats
           mountPath: /var/lib/grafana/dashboards/teslamate/charging-stats.json
-          subPath: chargng-stats.json
+          subPath: charging-stats.json
         - name: dashboards-teslamate-drives
           mountPath: /var/lib/grafana/dashboards/teslamate/drives.json
           subPath: drives.json
