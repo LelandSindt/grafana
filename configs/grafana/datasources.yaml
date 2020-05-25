@@ -5,20 +5,3 @@ datasources:
   name: Prometheus
   type: prometheus
   url: http://prometheus.prometheus.svc.cluster.local:9090
-- name: TeslaMate
-  type: postgres
-  url: postgresql.teslamate.svc.cluster.local:5432
-  user: teslamate
-  database: teslamate
-  password: ""
-  access: proxy
-  basicAuth: false
-  withCredentials: false
-  isDefault: false 
-  secureJsonData:
-    password: teslamate
-  jsonData:
-    postgresVersion: 1000
-    sslmode: disable
-  version: 1
-  editable: true
